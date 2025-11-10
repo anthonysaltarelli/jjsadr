@@ -1,57 +1,34 @@
-'use client';
-
-import { useState } from 'react';
 import Image from 'next/image';
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
-import BackgroundPicker, { backgroundOptions, type BackgroundOption } from "./components/BackgroundPicker";
 
 export default function Home() {
-  const [selectedBackground, setSelectedBackground] = useState<BackgroundOption>(backgroundOptions[0]);
-
-  // Determine text color and styling based on overlay color for image backgrounds
-  const isLightOverlay = selectedBackground.type === 'image' && selectedBackground.overlayColor === 'white';
-  const textColor = isLightOverlay ? 'text-foreground' : 'text-white';
-  const textColorSecondary = isLightOverlay ? 'text-secondary' : 'text-white/95';
-  const borderColor = isLightOverlay ? 'border-foreground/50' : 'border-white/50';
-  const shadowClass = isLightOverlay ? '' : 'drop-shadow-lg';
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
 
       <main>
-        {/* Header Section with Custom Background and Headshot */}
+        {/* Header Section with Background 6 */}
         <section className="relative min-h-[500px] md:min-h-[600px] flex items-center overflow-hidden">
-          {/* Custom Background */}
-          {selectedBackground.type === 'image' ? (
-            <>
-              <div
-                className="absolute inset-0 transition-all duration-500"
-                style={{
-                  backgroundImage: `url(${selectedBackground.value})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat',
-                  filter: `blur(${selectedBackground.blur || 0}px)`
-                }}
-              />
-              {/* Gradient overlay - adjustable color and opacity */}
-              <div
-                className="absolute inset-0 transition-all duration-500"
-                style={{
-                  background: selectedBackground.overlayColor === 'white'
-                    ? `linear-gradient(to right, rgba(255, 255, 255, ${(selectedBackground.overlayOpacity || 70) / 100}), rgba(255, 255, 255, ${((selectedBackground.overlayOpacity || 70) / 100) * 0.5}), transparent)`
-                    : `linear-gradient(to right, rgba(0, 0, 0, ${(selectedBackground.overlayOpacity || 70) / 100}), rgba(0, 0, 0, ${((selectedBackground.overlayOpacity || 70) / 100) * 0.4}), transparent)`
-                }}
-              />
-            </>
-          ) : (
-            <div
-              className="absolute inset-0 transition-all duration-500"
-              style={{ background: selectedBackground.value }}
-            />
-          )}
+          {/* Background Image */}
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'url(/background6.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              filter: 'blur(2px)'
+            }}
+          />
+
+          {/* Black gradient overlay at 70% opacity */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.28), transparent)'
+            }}
+          />
 
           {/* Headshot Image - Right Aligned, Full Height */}
           <div className="absolute right-0 top-0 h-full w-[600px] md:w-[700px]">
@@ -67,17 +44,17 @@ export default function Home() {
           {/* Text Content - Left Side */}
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-2xl">
-              <h1 className={`text-display-lg ${textColor} mb-4 ${shadowClass} transition-all duration-500`}>
+              <h1 className="text-display-lg text-white mb-4 drop-shadow-lg">
                 Joseph J. Saltarelli ADR
               </h1>
-              <p className={`text-subtitle ${textColorSecondary} mb-8 font-bold ${isLightOverlay ? '' : 'drop-shadow-md'} transition-all duration-500`}>
+              <p className="text-subtitle text-white/95 mb-8 font-bold drop-shadow-md">
                 Mediation & Arbitration
               </p>
-              <blockquote className={`border-l-4 ${borderColor} pl-6 py-2 transition-all duration-500`}>
-                <p className={`text-body-lg ${textColorSecondary} italic mb-2 ${isLightOverlay ? '' : 'drop-shadow-md'} transition-all duration-500`}>
+              <blockquote className="border-l-4 border-white/50 pl-6 py-2">
+                <p className="text-body-lg text-white/90 italic mb-2 drop-shadow-md">
                   "Peace is not an absence of war, it is a virtue, a state of mind, a disposition for benevolence, confidence, justice."
                 </p>
-                <cite className={`text-body ${textColor} opacity-70 not-italic ${isLightOverlay ? '' : 'drop-shadow-sm'} transition-all duration-500`}>
+                <cite className="text-body text-white opacity-70 not-italic drop-shadow-sm">
                   — Baruch Spinoza
                 </cite>
               </blockquote>
@@ -348,12 +325,6 @@ export default function Home() {
       </main>
 
       <Footer />
-
-      {/* Background Picker Tool (temporary) */}
-      <BackgroundPicker
-        currentBackground={selectedBackground}
-        onBackgroundChange={setSelectedBackground}
-      />
     </div>
   );
 }
