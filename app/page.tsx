@@ -40,7 +40,7 @@ export default function Home() {
         </section>
 
         {/* About Joe Section */}
-        <section id="about" className="py-16 md:py-24 bg-secondary/10">
+        <section id="about" className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-display-md text-foreground mb-12 text-center">
               About Joe Saltarelli
@@ -60,7 +60,7 @@ export default function Home() {
 
             {/* Credentials grid */}
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-background p-6 rounded-lg border border-accent/30">
+              <div className="bg-accent/20 p-6 rounded-lg border border-accent/30">
                 <h3 className="text-h3 text-foreground font-semibold mb-4 pb-3 border-b border-accent/20">
                   Education & Credentials
                 </h3>
@@ -85,7 +85,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-background p-6 rounded-lg border border-accent/30">
+              <div className="bg-accent/20 p-6 rounded-lg border border-accent/30">
                 <h3 className="text-h3 text-foreground font-semibold mb-4 pb-3 border-b border-accent/20">
                   Bar Admissions
                 </h3>
@@ -109,7 +109,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-background p-6 rounded-lg border border-accent/30">
+              <div className="bg-accent/20 p-6 rounded-lg border border-accent/30">
                 <h3 className="text-h3 text-foreground font-semibold mb-4 pb-3 border-b border-accent/20">
                   Areas of Expertise
                 </h3>
@@ -133,11 +133,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Core Services Overview */}
-        <section id="services" className="py-16 md:py-24 bg-secondary/10">
+        {/* My Philosophy */}
+        <section id="services" className="py-16 md:py-24 bg-accent/30">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-display-md text-foreground mb-12 text-center">
-              Core Services
+              My Philosophy
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               {/* Mediation Card */}
@@ -201,25 +201,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* My Philosophy Section */}
-        <section id="philosophy" className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-display-md text-foreground mb-12 text-center">
-              My Philosophy
-            </h2>
-            <div className="space-y-4">
-              <p className="text-body text-foreground/80">
-                [Your philosophy statement will go here. This section will describe your approach to alternative dispute resolution, your values, and what clients can expect when working with you.]
-              </p>
-              <p className="text-body text-foreground/80">
-                [Additional paragraphs about your methodology, experience, and commitment to fair and effective dispute resolution.]
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* Client Testimonials */}
-        <section className="py-16 md:py-24 bg-secondary/10">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-display-md text-foreground mb-12 text-center">
               Client Testimonials
@@ -259,7 +242,7 @@ export default function Home() {
         </section>
 
         {/* Call to Action Section */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
+        <section className="py-20 md:py-28 bg-accent/30">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center">
               <h2 className="text-display-md text-foreground mb-6">
@@ -268,36 +251,28 @@ export default function Home() {
               <p className="text-body-lg text-foreground/80 mb-10 max-w-2xl mx-auto">
                 Whether you're considering mediation or arbitration, I'm here to help guide you through the process. Let's discuss how we can work together to achieve a fair and efficient resolution.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="/contact"
-                  className="group relative inline-flex items-center justify-center px-8 py-4 bg-primary text-white rounded-lg text-button-lg font-semibold overflow-hidden transition-all duration-300 hover:bg-primary/90 hover:shadow-xl hover:scale-105"
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Schedule a Consultation
-                    <svg
-                      className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </a>
-                <a
-                  href="/about"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary/30 text-primary rounded-lg text-button-lg font-semibold transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:shadow-lg"
-                >
-                  Learn More About My Process
-                </a>
-              </div>
+              <a
+                href="/contact"
+                className="group relative inline-flex items-center justify-center px-8 py-4 bg-primary text-white rounded-lg text-button-lg font-semibold overflow-hidden transition-all duration-300 hover:bg-primary/90 hover:shadow-xl hover:scale-105"
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  Get in Touch
+                  <svg
+                    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </a>
             </div>
           </div>
         </section>
