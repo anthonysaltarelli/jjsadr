@@ -1,43 +1,64 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 
 export default function Home() {
+  const [imagesLoaded, setImagesLoaded] = useState({ background: false, headshot: false });
+  const [showImages, setShowImages] = useState(false);
+
+  // Check if both images are loaded
+  useEffect(() => {
+    if (imagesLoaded.background && imagesLoaded.headshot) {
+      setShowImages(true);
+    }
+  }, [imagesLoaded]);
+
+  // Preload background image
+  useEffect(() => {
+    const img = new window.Image();
+    img.src = '/background6.jpg';
+    img.onload = () => setImagesLoaded(prev => ({ ...prev, background: true }));
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
 
       <main>
         {/* Header Section with Background 6 */}
-        <section className="relative min-h-[500px] md:min-h-[600px] flex items-center overflow-hidden">
+        <section className="relative min-h-[500px] md:min-h-[600px] flex items-center overflow-hidden bg-slate-800">
           {/* Background Image */}
           <div
-            className="absolute inset-0"
+            className={`absolute inset-0 transition-opacity duration-500 ${showImages ? 'opacity-100' : 'opacity-0'}`}
             style={{
               backgroundImage: 'url(/background6.jpg)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
-              filter: 'blur(2px)'
+              filter: 'blur(5px)'
             }}
           />
 
           {/* Black gradient overlay at 70% opacity */}
           <div
-            className="absolute inset-0"
+            className={`absolute inset-0 transition-opacity duration-500 ${showImages ? 'opacity-100' : 'opacity-0'}`}
             style={{
               background: 'linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.28), transparent)'
             }}
           />
 
           {/* Headshot Image - Right Aligned, Full Height */}
-          <div className="absolute right-0 top-0 h-full w-[600px] md:w-[700px]">
+          <div className={`absolute right-0 top-0 h-full w-[600px] md:w-[700px] transition-opacity duration-500 ${showImages ? 'opacity-100' : 'opacity-0'}`}>
             <Image
               src="/joesaltarelli_headshot.png"
               alt="Joseph J. Saltarelli"
               fill
               className="object-cover object-left-top"
               priority
+              onLoad={() => setImagesLoaded(prev => ({ ...prev, headshot: true }))}
             />
           </div>
 

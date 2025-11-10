@@ -29,6 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" href="/background6.jpg" as="image" />
+      </head>
       <body
         className={`${headingFont.variable} ${bodyFont.variable} antialiased`}
       >
