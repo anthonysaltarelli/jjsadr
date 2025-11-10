@@ -29,10 +29,10 @@ export default function Home() {
 
       <main>
         {/* Header Section with Background 6 */}
-        <section className="relative min-h-[500px] md:min-h-[600px] flex items-center overflow-hidden bg-slate-800">
-          {/* Background Image */}
+        <section className="relative min-h-[400px] md:min-h-[600px] flex items-center overflow-hidden bg-slate-800">
+          {/* Background Image - Desktop only */}
           <div
-            className={`absolute inset-0 transition-opacity duration-500 ${showImages ? 'opacity-100' : 'opacity-0'}`}
+            className={`hidden md:block absolute inset-0 transition-opacity duration-500 ${showImages ? 'opacity-100' : 'opacity-0'}`}
             style={{
               backgroundImage: 'url(/background6.jpg)',
               backgroundSize: 'cover',
@@ -42,16 +42,23 @@ export default function Home() {
             }}
           />
 
-          {/* Black gradient overlay at 70% opacity */}
+          {/* Mobile-only charcoal gradient overlay */}
           <div
-            className={`absolute inset-0 transition-opacity duration-500 ${showImages ? 'opacity-100' : 'opacity-0'}`}
+            className={`md:hidden absolute inset-0 transition-opacity duration-500 ${showImages ? 'opacity-100' : 'opacity-0'}`}
+            style={{
+              background: 'linear-gradient(135deg, rgb(51, 65, 85) 0%, rgb(30, 41, 59) 50%, rgb(15, 23, 42) 100%)'
+            }}
+          />
+          {/* Desktop-only gradient overlay with transparency on right */}
+          <div
+            className={`hidden md:block absolute inset-0 transition-opacity duration-500 ${showImages ? 'opacity-100' : 'opacity-0'}`}
             style={{
               background: 'linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.28), transparent)'
             }}
           />
 
-          {/* Headshot Image - Right Aligned, Full Height */}
-          <div className={`absolute right-0 top-0 h-full w-[600px] md:w-[700px] transition-opacity duration-500 ${showImages ? 'opacity-100' : 'opacity-0'}`}>
+          {/* Headshot Image - Right Aligned, Full Height - Hidden on Mobile */}
+          <div className={`hidden md:block absolute right-0 top-0 h-full w-[600px] md:w-[700px] transition-opacity duration-500 ${showImages ? 'opacity-100' : 'opacity-0'}`}>
             <Image
               src="/joesaltarelli_headshot.png"
               alt="Joseph J. Saltarelli"
@@ -89,6 +96,19 @@ export default function Home() {
             <h2 className="text-display-md text-foreground mb-12 text-center">
               About Joe Saltarelli
             </h2>
+
+            {/* Mobile-only headshot */}
+            <div className="md:hidden mb-12 flex justify-center">
+              <div className="relative w-full max-w-md aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/josephsaltarelli_headshot_background.jpg"
+                  alt="Joseph J. Saltarelli"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 0px"
+                />
+              </div>
+            </div>
 
             {/* Main intro */}
             <div className="max-w-4xl mx-auto mb-12">
