@@ -6,18 +6,18 @@
    =========================== */
 :root {
   /* Primary Brand Colors */
-  --color-light-sage: #EBEFEE;    /* Light background, subtle sections */
-  --color-tan: #CCB499;           /* Warm accents, secondary elements */
-  --color-terracotta: #C8906D;    /* Mid-tone accents, highlights */
-  --color-rust: #BB6C43;          /* Primary accent, CTAs, emphasis */
-  --color-dark-brown: #4A413C;    /* Text, headings, dark elements */
+  --color-warm-white: #E9E6E7;    /* Light background, subtle sections */
+  --color-warm-taupe: #AB978C;    /* Warm accents, secondary elements */
+  --color-slate-gray: #7B7F8A;    /* Mid-tone accents, highlights */
+  --color-muted-blue: #6B7C98;    /* Primary accent, CTAs, emphasis */
+  --color-dark-gray: #5E5653;     /* Text, headings, dark elements */
 
   /* Semantic mappings for easy theming */
-  --background: var(--color-light-sage);
-  --foreground: var(--color-dark-brown);
-  --primary: var(--color-rust);
-  --secondary: var(--color-terracotta);
-  --accent: var(--color-tan);
+  --background: var(--color-warm-white);
+  --foreground: var(--color-dark-gray);
+  --primary: var(--color-muted-blue);
+  --secondary: var(--color-slate-gray);
+  --accent: var(--color-warm-taupe);
 }
 
 /* ===========================
@@ -32,11 +32,11 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
-  --color-light-sage: var(--color-light-sage);
-  --color-tan: var(--color-tan);
-  --color-terracotta: var(--color-terracotta);
-  --color-rust: var(--color-rust);
-  --color-dark-brown: var(--color-dark-brown);
+  --color-warm-white: var(--color-warm-white);
+  --color-warm-taupe: var(--color-warm-taupe);
+  --color-slate-gray: var(--color-slate-gray);
+  --color-muted-blue: var(--color-muted-blue);
+  --color-dark-gray: var(--color-dark-gray);
 
   /* Font families (set in layout.tsx) */
   --font-sans: var(--font-body);
