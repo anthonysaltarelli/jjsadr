@@ -5,12 +5,12 @@
    Swap these values to try different color schemes
    =========================== */
 :root {
-  /* Primary Brand Colors */
-  --color-warm-white: #E9E6E7;    /* Light background, subtle sections */
-  --color-warm-taupe: #AB978C;    /* Warm accents, secondary elements */
-  --color-slate-gray: #7B7F8A;    /* Mid-tone accents, highlights */
-  --color-muted-blue: #6B7C98;    /* Primary accent, CTAs, emphasis */
-  --color-dark-gray: #5E5653;     /* Text, headings, dark elements */
+  /* Primary Brand Colors - Cocoa Topaz Noonday */
+  --color-warm-white: #F7F4F2;    /* Off-white - Light background, subtle sections */
+  --color-warm-taupe: #C7AC9F;    /* Warm taupe - Warm accents, secondary elements */
+  --color-slate-gray: #742F14;    /* Deep cocoa brown - Mid-tone accents, highlights */
+  --color-muted-blue: #5A84AC;    /* Steel blue - Primary accent, CTAs, emphasis */
+  --color-dark-gray: #5C3C2C;     /* Dark mocha - Text, headings, dark elements */
 
   /* Semantic mappings for easy theming */
   --background: var(--color-warm-white);
