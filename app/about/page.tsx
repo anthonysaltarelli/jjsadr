@@ -108,51 +108,56 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-display-md text-foreground mb-8 text-center">
-            About
-          </h1>
+      <main>
+        {/* About / History Section */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-display-md text-foreground mb-12 text-center">
+                About
+              </h1>
 
-          {/* History Section */}
-          <section className="mb-16">
-            <div className="bg-accent/5 rounded-2xl p-8 md:p-12">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                    />
-                  </svg>
+              <div className="bg-accent/5 rounded-2xl p-8 md:p-12">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <svg
+                      className="w-6 h-6 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                      />
+                    </svg>
+                  </div>
+                  <h2 className="text-h3 text-foreground font-semibold">
+                    History of the Practice
+                  </h2>
                 </div>
-                <h2 className="text-display-sm text-foreground">
-                  History of the Practice
-                </h2>
-              </div>
-              <div className="space-y-4 text-body-lg text-foreground/80 leading-relaxed">
-                <p>
-                  Founded with a commitment to providing efficient and effective dispute resolution, our practice has been serving clients with integrity and professionalism for many years. What began as a focused mediation practice has evolved into a comprehensive alternative dispute resolution service.
-                </p>
-                <p>
-                  Through decades of experience in both mediation and arbitration, we've helped countless parties resolve complex disputes across various industries. Our approach combines legal expertise with practical problem-solving, always keeping the clients' best interests at the forefront.
-                </p>
-                <p>
-                  Today, the practice is recognized for its track record of successful resolutions, professional excellence, and commitment to making the dispute resolution process as smooth and cost-effective as possible for all parties involved.
-                </p>
+                <div className="space-y-4 text-body-lg text-foreground/80 leading-relaxed">
+                  <p>
+                    Founded with a commitment to providing efficient and effective dispute resolution, our practice has been serving clients with integrity and professionalism for many years. What began as a focused mediation practice has evolved into a comprehensive alternative dispute resolution service.
+                  </p>
+                  <p>
+                    Through decades of experience in both mediation and arbitration, we've helped countless parties resolve complex disputes across various industries. Our approach combines legal expertise with practical problem-solving, always keeping the clients' best interests at the forefront.
+                  </p>
+                  <p>
+                    Today, the practice is recognized for its track record of successful resolutions, professional excellence, and commitment to making the dispute resolution process as smooth and cost-effective as possible for all parties involved.
+                  </p>
+                </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* The Process Section */}
-          <section className="mb-16">
+        {/* The Process Section */}
+        <section className="py-16 bg-accent/10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-h1 text-foreground mb-4 font-semibold">
                 Our Process
@@ -232,19 +237,24 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-          </section>
+            </div>
+          </div>
+        </section>
 
-          {/* Fee Arrangements Section */}
-          <section className="mb-16">
-            <div className="bg-accent/10 rounded-xl p-8">
-              <h2 className="text-h2 text-foreground mb-4 text-center">
-                Fee Arrangements
-              </h2>
-              <p className="text-body-lg text-foreground/80 text-center mb-6">
-                Flexible fee structures to meet your needs
-              </p>
+        {/* Fee Arrangements Section */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-h1 text-foreground mb-4 font-semibold">
+                  Fee Arrangements
+                </h2>
+                <p className="text-body-lg text-foreground/80 max-w-2xl mx-auto">
+                  Flexible fee structures to meet your needs
+                </p>
+              </div>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-background rounded-lg p-6 border border-accent/20">
+                <div className="bg-accent/5 rounded-lg p-6 border border-accent/20">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
                       <svg
@@ -268,7 +278,7 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className="bg-background rounded-lg p-6 border border-accent/20">
+                <div className="bg-accent/5 rounded-lg p-6 border border-accent/20">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
                       <svg
@@ -296,21 +306,25 @@ export default function AboutPage() {
                 Fee arrangements will be discussed during the initial consultation to determine the best option for your specific case.
               </p>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* FAQ Section */}
-          <section className="mb-8">
-            <div className="text-center mb-12">
-              <h2 className="text-h1 text-foreground mb-4 font-semibold">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-body-lg text-foreground/80 max-w-2xl mx-auto">
-                Find answers to common questions about mediation, arbitration, and the dispute resolution process.
-              </p>
+        {/* FAQ Section */}
+        <section className="py-16 bg-accent/10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-h1 text-foreground mb-4 font-semibold">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-body-lg text-foreground/80 max-w-2xl mx-auto">
+                  Find answers to common questions about mediation, arbitration, and the dispute resolution process.
+                </p>
+              </div>
+              <FAQAccordion />
             </div>
-            <FAQAccordion />
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
