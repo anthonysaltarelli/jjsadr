@@ -172,7 +172,7 @@ export default function AboutPage() {
               <div className="flex gap-6 group">
                 <div className="flex-shrink-0">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                    <span className="text-h2 text-primary font-bold">1</span>
+                    <span className="text-h2 text-primary font-bold leading-none -mt-1">1</span>
                   </div>
                 </div>
                 <div className="flex-1 pt-2">
@@ -190,7 +190,7 @@ export default function AboutPage() {
               <div className="flex gap-6 group">
                 <div className="flex-shrink-0">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                    <span className="text-h2 text-primary font-bold">2</span>
+                    <span className="text-h2 text-primary font-bold leading-none -mt-1">2</span>
                   </div>
                 </div>
                 <div className="flex-1 pt-2">
@@ -208,7 +208,7 @@ export default function AboutPage() {
               <div className="flex gap-6 group">
                 <div className="flex-shrink-0">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                    <span className="text-h2 text-primary font-bold">3</span>
+                    <span className="text-h2 text-primary font-bold leading-none -mt-1">3</span>
                   </div>
                 </div>
                 <div className="flex-1 pt-2">
@@ -226,7 +226,7 @@ export default function AboutPage() {
               <div className="flex gap-6 group">
                 <div className="flex-shrink-0">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                    <span className="text-h2 text-primary font-bold">4</span>
+                    <span className="text-h2 text-primary font-bold leading-none -mt-1">4</span>
                   </div>
                 </div>
                 <div className="flex-1 pt-2">
